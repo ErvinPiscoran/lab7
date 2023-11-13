@@ -50,6 +50,7 @@ public class Main {
     }
     public static  void p4(){
         int optiune;
+        String compara;
         HashMap<String, Integer> student = new HashMap<String, Integer>();
         Scanner s=new Scanner(System.in);
         do{
@@ -70,7 +71,13 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Varsta carui student doriti sa o aflati?:");
-                    System.out.println(student.get(s.nextLine()));
+                    compara=s.nextLine();
+                    if(student.containsKey(compara)){
+                        System.out.println(student.get(compara));
+                    }
+                    else{
+                        System.out.println("Studentul nu exista.");
+                    }
                     break;
                 case 3:
                     break;
