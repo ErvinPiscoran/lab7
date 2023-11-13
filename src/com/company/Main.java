@@ -3,6 +3,43 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.*;
 
+class studenti{
+    private String nume;
+    private int nota1;
+    private int nota2;
+    private int nota3;
+    public String getNume(){
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public int getNota1() {
+        return nota1;
+    }
+
+    public void setNota1(int nota1) {
+        this.nota1 = nota1;
+    }
+
+    public int getNota2() {
+        return nota2;
+    }
+
+    public void setNota2(int nota2) {
+        this.nota2 = nota2;
+    }
+
+    public int getNota3() {
+        return nota3;
+    }
+
+    public void setNota3(int nota3) {
+        this.nota3 = nota3;
+    }
+}
 public class Main {
     public static void p1(){
         ArrayList<String> Studenti= new ArrayList<String>();
@@ -37,15 +74,13 @@ public class Main {
         System.out.println("Marimea este:"+carti.size());
     }
     public static void p3(){
-        HashMap<String, String> persoana = new HashMap<String, String>();
-        persoana.put("Ervin","ervin.florin@yahoo.com");
-        persoana.put("Matias","matiasgolan@gmail.com");
-        persoana.put("Potter", "avadakadavra@hogwards.uk");
-        for(String i : persoana.keySet()){
-            System.out.println("Cheie: "+i);
-        }
-        for(String i : persoana.values()){
-            System.out.println("Valoare: "+ i);
+        HashMap<String, Integer> studenti = new HashMap<>();
+        studenti.put("florina", 9);
+        studenti.put("matias", 8);
+        studenti.put("ervin", 7);
+        for (String nume : studenti.keySet()) {
+            int nota = studenti.get(nume);
+            System.out.println(nume+" are nota:" + nota);
         }
     }
     public static  void p4(){
