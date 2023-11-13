@@ -51,10 +51,6 @@ public class Main {
     public static  void p4(){
         int optiune;
         HashMap<String, Integer> student = new HashMap<String, Integer>();
-        System.out.println("=========MENIU=========");
-        System.out.println("1.Adaugare Student");
-        System.out.println("2.Afisare detalii Student");
-        System.out.println("3.Iesire\n");
         Scanner s=new Scanner(System.in);
         do{
             System.out.println("=========MENIU=========");
@@ -65,8 +61,10 @@ public class Main {
             s.nextLine();
             switch(optiune){
                 case 1:
-                    System.out.println("Adaugati un student:");
+                    System.out.println("=Adaugati un student=");
+                    System.out.println("Introduceti numele studentului:");
                     String  nume = s.nextLine();
+                    System.out.println("Introduceti varsta studentului:");
                     Integer varsta = s.nextInt();
                     student.put(nume, varsta);
                     break;
